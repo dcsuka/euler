@@ -63,7 +63,7 @@ public:
 int main()
 {
     Solution a;
-    int n = 1000000000;
+    int n = 1000000;
 
     auto start = std::chrono::high_resolution_clock::now();
     std::vector<int> erato = a.generatePrimesEratosthenes(n);
@@ -72,7 +72,7 @@ int main()
 
     std::cout << "Benchmarks for generation of " << n << " prime numbers in microseconds:" << std::endl;
     std::cout << "Sieve of Eratosthenes: " << eratoDuration.count() << std::endl;
-    /*
+
     start = std::chrono::high_resolution_clock::now();
     std::vector<int> loop = a.generatePrimesLoop(n);
     stop = std::chrono::high_resolution_clock::now();
@@ -80,6 +80,6 @@ int main()
     std::cout << "For loop: " << loopDuration.count() << std::endl;
 
     assert(erato == loop);
-    */
+
     return 0;
 }
